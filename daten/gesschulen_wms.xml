@@ -1,0 +1,842 @@
+<?xml version='1.0' encoding="UTF-8" standalone="no" ?>
+<WMS_Capabilities version="1.3.0"  xmlns="http://www.opengis.net/wms"   xmlns:sld="http://www.opengis.net/sld"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xmlns:ms="http://mapserver.gis.umn.edu/mapserver"   xmlns:inspire_common="http://inspire.ec.europa.eu/schemas/common/1.0"   xmlns:inspire_vs="http://inspire.ec.europa.eu/schemas/inspire_vs/1.0"   xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd  http://www.opengis.net/sld http://schemas.opengis.net/sld/1.1.0/sld_capabilities.xsd  http://inspire.ec.europa.eu/schemas/inspire_vs/1.0  http://inspire.ec.europa.eu/schemas/inspire_vs/1.0/inspire_vs.xsd http://mapserver.gis.umn.edu/mapserver https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;service=WMS&amp;version=1.3.0&amp;request=GetSchemaExtension">
+<Service>
+  <Name>WMS</Name>
+  <Title>Schulen für Gesundheitsfachberufe  – INSPIRE View-Service (WMS-LAVG-GESSCHULEN)</Title>
+  <Abstract>Der INSPIRE View Service stellt die Standorte der Schulen für Gesundheitsfachberufe im Land Brandenburg dar. Die Schulen werden anhand ihrer Ausbildungsrichtungen in zwölf unterschiedliche Klassen gegliedert. Weiterführende Informationen sind mit Hilfe einer Sachdatenabfrage (GetFeatureInfo) abrufbar.</Abstract>
+  <KeywordList>
+      <Keyword>WMS</Keyword>
+      <Keyword>infoMapAccessService</Keyword>
+      <Keyword>inspireidentifiziert</Keyword>
+      <Keyword>Gesundheit</Keyword>
+      <Keyword>Ausbildungsstätte</Keyword>
+      <Keyword>Schule</Keyword>
+      <Keyword>Medizinischer Beruf</Keyword>
+      <Keyword>Heilberuf</Keyword>
+  </KeywordList>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://geoportal.brandenburg.de/detailansichtdienst/render?view=gdibb&amp;url=https%3A%2F%2Fgeoportal.brandenburg.de%2Fgs-json%2Fxml%3Ffileid%3Da853b8a6-d21b-4514-b522-ba56c552eba8"/>
+  <ContactInformation>
+    <ContactPersonPrimary>
+      <ContactPerson>INSPIRE-Zentrale im Land Brandenburg</ContactPerson>
+      <ContactOrganization>Landesvermessung und Geobasisinformation Brandenburg (LGB)</ContactOrganization>
+    </ContactPersonPrimary>
+      <ContactPosition>Kundenservice</ContactPosition>
+    <ContactAddress>
+        <AddressType>Strasse und Hausnummer</AddressType>
+        <Address>Heinrich-Mann-Allee 104 B</Address>
+        <City>Potsdam</City>
+        <StateOrProvince>Brandenburg</StateOrProvince>
+        <PostCode>14473</PostCode>
+        <Country>Deutschland</Country>
+    </ContactAddress>
+      <ContactVoiceTelephone>+49-331-8844-123</ContactVoiceTelephone>
+      <ContactFacsimileTelephone>+49-331-8844-16123</ContactFacsimileTelephone>
+  <ContactElectronicMailAddress>zentrale@inspire.brandenburg.de</ContactElectronicMailAddress>
+  </ContactInformation>
+  <Fees>Nutzung erfolgt derzeit kostenfrei unter Beachtung des Urheberrechts.</Fees>
+  <AccessConstraints>Die Daten können gemäß der „Datenlizenz Deutschland - Namensnennung - Version 2.0“ (https://www.govdata.de/dl-de/by-2-0) genutzt werden. Als Bezeichnung des Bereitstellers ist „© Landesamt für Arbeitsschutz, Verbraucherschutz und Gesundheit Brandenburg“ anzugeben.</AccessConstraints>
+  <MaxWidth>15000</MaxWidth>
+  <MaxHeight>15000</MaxHeight>
+</Service>
+
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>text/xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/gif</Format>
+      <Format>image/tiff</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/html</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <Format>text/plain</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <sld:GetLegendGraphic>
+      <Format>image/jpeg</Format>
+      <Format>image/png</Format>
+      <Format>image/gif</Format>
+      <Format>image/png; mode=8bit</Format>
+      <Format>image/vnd.jpeg-png</Format>
+      <Format>image/vnd.jpeg-png8</Format>
+      <DCPType>
+        <HTTP>
+          <Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;"/></Get>
+          <Post><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;"/></Post>
+        </HTTP>
+      </DCPType>
+    </sld:GetLegendGraphic>
+  </Request>
+  <Exception>
+    <Format>XML</Format>
+    <Format>INIMAGE</Format>
+    <Format>BLANK</Format>
+  </Exception>
+  <sld:UserDefinedSymbolization SupportSLD="1" UserLayer="0" UserStyle="1" RemoteWFS="0" InlineFeature="0" RemoteWCS="0"/>
+  <inspire_vs:ExtendedCapabilities>
+    <inspire_common:MetadataUrl xsi:type="inspire_common:resourceLocatorType">
+      <inspire_common:URL>https://geoportal.brandenburg.de/gs-json/xml?fileid=a853b8a6-d21b-4514-b522-ba56c552eba8</inspire_common:URL>
+      <inspire_common:MediaType>application/vnd.ogc.csw.GetRecordByIdResponse_xml</inspire_common:MediaType>
+    </inspire_common:MetadataUrl>
+    <inspire_common:SupportedLanguages>
+      <inspire_common:DefaultLanguage><inspire_common:Language>ger</inspire_common:Language></inspire_common:DefaultLanguage>
+    </inspire_common:SupportedLanguages>
+    <inspire_common:ResponseLanguage><inspire_common:Language>ger</inspire_common:Language></inspire_common:ResponseLanguage>
+  </inspire_vs:ExtendedCapabilities>
+  <Layer queryable="1">
+    <Name>GESUNDHEIT</Name>
+    <Title>SCHULEN_GESUNDHEITSFACHBERUFE</Title>
+    <Abstract>Schulen für Gesundheitsfachberufe im Land Brandenburg</Abstract>
+    <KeywordList>
+        <Keyword>WMS</Keyword>
+        <Keyword>infoMapAccessService</Keyword>
+        <Keyword>inspireidentifiziert</Keyword>
+        <Keyword>Gesundheit</Keyword>
+        <Keyword>Ausbildungsstätte</Keyword>
+        <Keyword>Schule</Keyword>
+        <Keyword>Medizinischer Beruf</Keyword>
+        <Keyword>Heilberuf</Keyword>
+    </KeywordList>
+    <CRS>EPSG:25833</CRS>
+    <CRS>EPSG:25832</CRS>
+    <CRS>EPSG:4326</CRS>
+    <CRS>EPSG:4258</CRS>
+    <CRS>EPSG:3034</CRS>
+    <CRS>EPSG:3035</CRS>
+    <CRS>EPSG:3044</CRS>
+    <CRS>EPSG:3045</CRS>
+    <CRS>EPSG:3857</CRS>
+    <CRS>EPSG:4839</CRS>
+    <EX_GeographicBoundingBox>
+        <westBoundLongitude>10.897849</westBoundLongitude>
+        <eastBoundLongitude>14.904938</eastBoundLongitude>
+        <southBoundLatitude>51.299996</southBoundLatitude>
+        <northBoundLatitude>53.599995</northBoundLatitude>
+    </EX_GeographicBoundingBox>
+    <BoundingBox CRS="EPSG:25833"
+                minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+    <BoundingBox CRS="EPSG:25832"
+                minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+    <BoundingBox CRS="EPSG:4326"
+                minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+    <BoundingBox CRS="EPSG:4258"
+                minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+    <BoundingBox CRS="EPSG:3034"
+                minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+    <BoundingBox CRS="EPSG:3035"
+                minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+    <BoundingBox CRS="EPSG:3044"
+                minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+    <BoundingBox CRS="EPSG:3045"
+                minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+    <BoundingBox CRS="EPSG:3857"
+                minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+    <BoundingBox CRS="EPSG:4839"
+                minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+    <AuthorityURL name="lavg-brandenburg">
+      <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://registry.gdi-de.org/id/de.bb.metadata"/>
+    </AuthorityURL>
+    <Style>
+       <Name>default</Name>
+       <Title>Gesundheit</Title>
+       <LegendURL width="353" height="267">
+          <Format>image/png</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=GESUNDHEIT&amp;format=image/png&amp;STYLE=default"/>
+       </LegendURL>
+    </Style>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>heb</Name>
+        <Title>Hebammenschulen</Title>
+        <Abstract>Standorte der Hebammenschulen im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="139" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=heb&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>nfs</Name>
+        <Title>Notfallsanitäterschulen</Title>
+        <Abstract>Standorte der Notfallsanitäterschulen im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="157" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=nfs&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>erg</Name>
+        <Title>Schulen für Ergotherapie</Title>
+        <Abstract>Standorte der Schulen für Ergotherapie im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="168" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=erg&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>gki</Name>
+        <Title>Schulen für Gesundheits- und Kinderkrankenpflege</Title>
+        <Abstract>Standorte der Schulen für Gesundheits- und Kinderkrankenpflege im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="307" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=gki&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>gkp</Name>
+        <Title>Schulen für Gesundheits- und Krankenpflege</Title>
+        <Abstract>Standorte der Schulen für Gesundheits- und Krankenpflege im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="275" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=gkp&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>gkph</Name>
+        <Title>Schulen für Gesundheits- und Krankenpflegehilfe</Title>
+        <Abstract>Standorte der Schulen für Gesundheits- und Krankenpflegehilfe im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="297" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=gkph&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>log</Name>
+        <Title>Schulen für Logopädie</Title>
+        <Abstract>Standorte der Schulen für Logopädie im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="155" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=log&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>mmb</Name>
+        <Title>Schulen für Masseure und medizinische Bademeister</Title>
+        <Abstract>Standorte der Schulen für Masseure und medizinische Bademeister im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="319" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=mmb&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>mtl</Name>
+        <Title>Schule für Medizinisch-technische Laboratoriumsassistenz</Title>
+        <Abstract>Standorte der Schulen für für Medizinisch-technische Laboratoriumsassistenz im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="353" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=mtl&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>mtr</Name>
+        <Title>Schule für Medizinisch-technische Radiologieassistenz</Title>
+        <Abstract>Standorte der Schulen für Medizinisch-technische Radiologieassistenz im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="333" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=mtr&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>pta</Name>
+        <Title>Schulen für pharm. techn. Assistenz</Title>
+        <Abstract>Standorte der Schulen für pharm. techn. Assistenz im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="227" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=pta&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+    <Layer queryable="1" opaque="0" cascaded="0">
+        <Name>phy</Name>
+        <Title>Schulen für Physiotherapie</Title>
+        <Abstract>Standorte der Schulen für Physiotherapie im Land Brandenburg.</Abstract>
+        <CRS>EPSG:25833</CRS>
+        <CRS>EPSG:25832</CRS>
+        <CRS>EPSG:4326</CRS>
+        <CRS>EPSG:4258</CRS>
+        <CRS>EPSG:3034</CRS>
+        <CRS>EPSG:3035</CRS>
+        <CRS>EPSG:3044</CRS>
+        <CRS>EPSG:3045</CRS>
+        <CRS>EPSG:3857</CRS>
+        <CRS>EPSG:4839</CRS>
+        <EX_GeographicBoundingBox>
+            <westBoundLongitude>10.897849</westBoundLongitude>
+            <eastBoundLongitude>14.904938</eastBoundLongitude>
+            <southBoundLatitude>51.299996</southBoundLatitude>
+            <northBoundLatitude>53.599995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="EPSG:25833"
+                    minx="228152" miny="5.69041e+06" maxx="493382" maxy="5.93902e+06" />
+        <BoundingBox CRS="EPSG:25832"
+                    minx="625795" miny="5.68528e+06" maxx="910928" maxy="5.95521e+06" />
+        <BoundingBox CRS="EPSG:4326"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:4258"
+                    minx="51.299996" miny="10.897849" maxx="53.599995" maxy="14.904938" />
+        <BoundingBox CRS="EPSG:3034"
+                    minx="2.72534e+06" miny="4.05756e+06" maxx="2.98243e+06" maxy="4.32964e+06" />
+        <BoundingBox CRS="EPSG:3035"
+                    minx="3.13269e+06" miny="4.38054e+06" maxx="3.399e+06" maxy="4.66231e+06" />
+        <BoundingBox CRS="EPSG:3044"
+                    minx="5.68528e+06" miny="625795" maxx="5.95521e+06" maxy="910928" />
+        <BoundingBox CRS="EPSG:3045"
+                    minx="5.69041e+06" miny="228152" maxx="5.93902e+06" maxy="493382" />
+        <BoundingBox CRS="EPSG:3857"
+                    minx="1.21314e+06" miny="6.67453e+06" maxx="1.65921e+06" maxy="7.09476e+06" />
+        <BoundingBox CRS="EPSG:4839"
+                    minx="33513.8" miny="26379.6" maxx="297827" maxy="306311" />
+        <Identifier authority="lavg-brandenburg">a0e2d01f-c95f-4189-aefa-c1dbada2d0ab</Identifier>
+        <MetadataURL type="ISO19115:2003">
+          <Format>application/vnd.ogc.csw.GetRecordByIdResponse_xml</Format>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.brandenburg.de/gs-json/xml?fileid=a0e2d01f-c95f-4189-aefa-c1dbada2d0ab"/>
+        </MetadataURL>
+        <Style>
+          <Name>default</Name>
+          <Title>default</Title>
+          <LegendURL width="179" height="25">
+             <Format>image/png</Format>
+             <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://inspire.brandenburg.de/services/gesschulen_wms?language=ger&amp;version=1.3.0&amp;service=WMS&amp;request=GetLegendGraphic&amp;sld_version=1.1.0&amp;layer=phy&amp;format=image/png&amp;STYLE=default"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1</MinScaleDenominator>
+        <MaxScaleDenominator>3e+06</MaxScaleDenominator>
+    </Layer>
+  </Layer>
+</Capability>
+</WMS_Capabilities>
