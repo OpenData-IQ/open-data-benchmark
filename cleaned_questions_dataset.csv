@@ -119,3 +119,4 @@ Gibt es Daten zur Bundetagswahl 2013?,ja bzw Link zu Datei,btw13_kerg.csv,de-bun
 "Wo sind öffentliche Toiletten in Wien, Österreich?",das ist nicht in deutschland,false,false,false premise,1,
 Wie heißen die Südwärts Teilprojekte in Dortmund?,"es gibt keine ""Südwärts"", das heißt Nordwärts",fb1-projekt-nordwaerts-teilprojekte.csv,projekt-nordwarts-teilprojekte.rdf,false premise,2,
 Wie viele Teilnehmer*innen hatten die Tummelferien 2011 in Halle (Saale)?,"sie waren in Moers und nicht in Halle, false",tummelferien2011.csv,tummelferien.rdf,false premise,2,
+In welchem Stadtbereich Rostocks war der Anteil ausländischer Einwohnerinnen und Einwohner zum 31.12.2010 am höchsten?,"Im Stadtbereich Gartenstadt-Stadtweide lag der Anteil ausländischer Einwohnerinnen und Einwohner am 31.12.2010 mit 7,9 % am höchsten.",bevoelkerungsstruktur_2010_staatsangehoerigkeit.csv,45e94633-189b-4857-b710-f9b6fb4aa7a8,aggregation,2,
